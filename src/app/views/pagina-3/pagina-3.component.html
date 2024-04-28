@@ -1,0 +1,115 @@
+
+<div class="content " *ngIf="step==0">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 1rem;">
+
+            <h3 style="width: 100%;text-align: center;" class="textColored"><b>Seleccione la respuesta correcta a las siguientes preguntas</b></h3>
+
+            <div class="card text-center">
+              <div class="card-header cabecera1"  style="text-align: left ;">
+                <h3 class="texto-respuesta">¿Qué modelo es entendido como un fallo de comunicación debido a una ruptura temprana en la capacidad de forjar las relaciones aprendidas? </h3>
+              </div>
+              <div class="card-body"  style="text-align: left ;">
+                
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1A}">
+                        <h4 class="texto-respuesta"  (click)="select1A()">Modelo de cascadas emocionales </h4>
+                    </div>
+
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1B}">
+                        <h4 class="texto-respuesta"  (click)="select1B()">Modelo de hipersensibilidad interpersonal </h4>
+                    </div>
+
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1C}">
+                        <h4 class="texto-respuesta"  (click)="select1C()">Modelo basado en la mentalización </h4>
+                    </div>
+              </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta">Marca la opción correcta acerca de los predictores y mantenedores del TLP: </h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2A}">
+                          <h4 class="texto-respuesta"  (click)="select2A()">Estilo de crianza favorecedor </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2B}">
+                          <h4 class="texto-respuesta"  (click)="select2B()">Presencia de alguna psicopatología en la infancia y/o adolescencia </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2C}">
+                          <h4 class="texto-respuesta"  (click)="select2C()">Aspectos relacionales positivos en la infancia </h4>
+                      </div>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta">Según lo mencionado durante la exposición oral… </h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3A}">
+                          <h4 class="texto-respuesta"  (click)="select3A()">La Terapia Dialéctico Conductual es el tratamiento de primera elección para el Trastorno Límite de Personalidad. </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3B}">
+                          <h4 class="texto-respuesta"  (click)="select3B()">A través de la Terapia Dialéctico Conductual, Marsha Linehan, su creadora, hace hincapié en el tratamiento de la conducta suicida en los pacientes de Trastorno Límite de la Personalidad. </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3C}">
+                          <h4 class="texto-respuesta"  (click)="select3C()">Las opciones A y B son correctas.</h4>
+                      </div>
+                </div>
+            </div>
+            <div>
+                <div class="boton">
+                    <h4 class="texto-respuesta"  (click)="comprobar()"><b>Comprobar respuestas</b></h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div class="content " *ngIf="step==2">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 10rem;">
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta" style="width: 100%;text-align: center;">Lo sentimos!</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                    <h4 class="texto-respuesta" style="width: 100%;text-align: center;">Las respuestas seleccionadas no son correctas. Puedes volver a intentarlo pulsando el botón.</h4>
+                    <div class="boton">
+                        <h4 class="texto-respuesta"  (click)="recargar()"><b>Reintentar</b></h4>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div class="content " *ngIf="step==1">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 10rem;">
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta" style="width: 100%;text-align: center;">¡Correcto!</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                    <h4 class="texto-respuesta" style="width: 100%;text-align: center;">Ve a la <b>biblioteca (por fuera)</b> para buscar la pegatina del QR 3 y pégala en tu hoja.</h4>
+                   
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div>

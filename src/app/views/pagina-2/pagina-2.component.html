@@ -1,0 +1,115 @@
+
+<div class="content " *ngIf="step==0">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 1rem;">
+
+            <h3 style="width: 100%;text-align: center;" class="textColored"><b>Seleccione la respuesta correcta a las siguientes preguntas</b></h3>
+
+            <div class="card text-center">
+              <div class="card-header cabecera1"  style="text-align: left ;">
+                <h3 class="texto-respuesta">Una paciente indica que, en ocasiones, gasta grandes sumas de dinero y conduce temerariamente. ¿En qué criterio se incluye este síntoma? </h3>
+              </div>
+              <div class="card-body"  style="text-align: left ;">
+                
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1A}">
+                        <h4 class="texto-respuesta"  (click)="select1A()">Criterio 8. Dificultad para controlar la ira.</h4>
+                    </div>
+
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1B}">
+                        <h4 class="texto-respuesta"  (click)="select1B()">Criterio 4. Impulsividad en dos o más áreas que son potencialmente autolesivas.</h4>
+                    </div>
+
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1C}">
+                        <h4 class="texto-respuesta"  (click)="select1C()">Criterio 6. Inestabilidad afectiva debida a una reactividad notable del estado de ánimo.</h4>
+                    </div>
+              </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta">Uno de los trastornos de los que debemos hacer un diagnóstico diferencial es…</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2A}">
+                          <h4 class="texto-respuesta"  (click)="select2A()">Esquizofrenia </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2B}">
+                          <h4 class="texto-respuesta"  (click)="select2B()">TDAH </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2C}">
+                          <h4 class="texto-respuesta"  (click)="select2C()">Trastorno del estado de ánimo </h4>
+                      </div>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta">Los trastornos coexistentes con TLP más frecuentes son:</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3A}">
+                          <h4 class="texto-respuesta"  (click)="select3A()">Trastornos de ansiedad</h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3B}">
+                          <h4 class="texto-respuesta"  (click)="select3B()">Trastornos afectivos</h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3C}">
+                          <h4 class="texto-respuesta"  (click)="select3C()">Uso de sustancias </h4>
+                      </div>
+                </div>
+            </div>
+            <div>
+                <div class="boton">
+                    <h4 class="texto-respuesta"  (click)="comprobar()"><b>Comprobar respuestas</b></h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div class="content " *ngIf="step==2">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 10rem;">
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta" style="width: 100%;text-align: center;">Lo sentimos!</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                    <h4 class="texto-respuesta" style="width: 100%;text-align: center;">Las respuestas seleccionadas no son correctas. Puedes volver a intentarlo pulsando el botón.</h4>
+                    <div class="boton">
+                        <h4 class="texto-respuesta"  (click)="recargar()"><b>Reintentar</b></h4>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div class="content " *ngIf="step==1">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 10rem;">
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta" style="width: 100%;text-align: center;">¡Correcto!</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                    <h4 class="texto-respuesta" style="width: 100%;text-align: center;">Ve a las <b>escaleras del edificio nuevo</b> para buscar la pegatina del QR 2 y pégala en tu hoja</h4>
+                   
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div>

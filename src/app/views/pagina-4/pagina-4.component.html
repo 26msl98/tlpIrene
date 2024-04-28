@@ -1,0 +1,115 @@
+
+<div class="content " *ngIf="step==0">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 1rem;">
+
+            <h3 style="width: 100%;text-align: center;" class="textColored"><b>Seleccione la respuesta correcta a las siguientes preguntas</b></h3>
+
+            <div class="card text-center">
+              <div class="card-header cabecera1"  style="text-align: left ;">
+                <h3 class="texto-respuesta">¿Qué autor recogió por primera vez todo lo estudiado hasta el momento en la categoría de “grupo límite de la neurosis”? </h3>
+              </div>
+              <div class="card-body"  style="text-align: left ;">
+                
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1A}">
+                        <h4 class="texto-respuesta"  (click)="select1A()">Freud</h4>
+                    </div>
+
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1B}">
+                        <h4 class="texto-respuesta"  (click)="select1B()">Adolf Stern</h4>
+                    </div>
+
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1C}">
+                        <h4 class="texto-respuesta"  (click)="select1C()">Eysenck</h4>
+                    </div>
+              </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta">¿Cuántos años dicen los estudios longitudinales que pasan para que casi la mitad de las personas ya no tengan un patrón de comportamiento que cumpla todos los criterios de TLP? </h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2A}">
+                          <h4 class="texto-respuesta"  (click)="select2A()">10</h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2B}">
+                          <h4 class="texto-respuesta"  (click)="select2B()">7</h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2C}">
+                          <h4 class="texto-respuesta"  (click)="select2C()">15</h4>
+                      </div>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta">En 1684 ____ definió la sintomatología del actual TLP como síndrome “folie maniaco-mélancolique”</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3A}">
+                          <h4 class="texto-respuesta"  (click)="select3A()">Bonet </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3B}">
+                          <h4 class="texto-respuesta"  (click)="select3B()">Kraeppellin </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3C}">
+                          <h4 class="texto-respuesta"  (click)="select3C()">Freud </h4>
+                      </div>
+                </div>
+            </div>
+            <div>
+                <div class="boton">
+                    <h4 class="texto-respuesta"  (click)="comprobar()"><b>Comprobar respuestas</b></h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div class="content " *ngIf="step==2">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 10rem;">
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta" style="width: 100%;text-align: center;">Lo sentimos!</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                    <h4 class="texto-respuesta" style="width: 100%;text-align: center;">Las respuestas seleccionadas no son correctas. Puedes volver a intentarlo pulsando el botón.</h4>
+                    <div class="boton">
+                        <h4 class="texto-respuesta"  (click)="recargar()"><b>Reintentar</b></h4>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div class="content " *ngIf="step==1">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 10rem;">
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta" style="width: 100%;text-align: center;">¡Correcto!</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                    <h4 class="texto-respuesta" style="width: 100%;text-align: center;">Ve <b>detrás de la capilla</b> para buscar la pegatina del QR 4 y pégala en tu hoja. </h4>
+                   
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div>

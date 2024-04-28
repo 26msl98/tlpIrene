@@ -1,0 +1,115 @@
+
+<div class="content " *ngIf="step==0">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 1rem;">
+
+            <h3 style="width: 100%;text-align: center;" class="textColored"><b>Seleccione la respuesta correcta a las siguientes preguntas</b></h3>
+
+            <div class="card text-center">
+              <div class="card-header cabecera1"  style="text-align: left ;">
+                <h3 class="texto-respuesta">¿Qué psicofármacos suelen utilizarse para tratar la impulsividad en el TLP? </h3>
+              </div>
+              <div class="card-body"  style="text-align: left ;">
+                
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1A}">
+                        <h4 class="texto-respuesta"  (click)="select1A()">Litio </h4>
+                    </div>
+
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1B}">
+                        <h4 class="texto-respuesta"  (click)="select1B()">Naltrexona y ácidos grasos Omega-3 </h4>
+                    </div>
+
+                    <div class="respuesta" [ngClass]="{'selected': pregunta1C}">
+                        <h4 class="texto-respuesta"  (click)="select1C()">ISRS y antipsicóticos</h4>
+                    </div>
+              </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta">¿Cuál de estas afirmaciones es cierta con respecto a las personas con TLP?</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2A}">
+                          <h4 class="texto-respuesta"  (click)="select2A()">Nunca devalúan a quienes los rodean. </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2B}">
+                          <h4 class="texto-respuesta"  (click)="select2B()">Aunque sus relaciones interpersonales son inestables, su autoimagen es estable. </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta2C}">
+                          <h4 class="texto-respuesta"  (click)="select2C()">Pueden presentar síntomas disociativos, como la despersonalización. </h4>
+                      </div>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta">En cuanto al suicidio y el TLP… </h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3A}">
+                          <h4 class="texto-respuesta"  (click)="select3A()">Es un tema de suma importancia, ya que el 60-70% de los pacientes han tenido algún intento. </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3B}">
+                          <h4 class="texto-respuesta"  (click)="select3B()">Es un tema de suma importancia, y se estima que el 10% de los pacientes han tenido algún intento. </h4>
+                      </div>
+  
+                      <div class="respuesta" [ngClass]="{'selected': pregunta3C}">
+                          <h4 class="texto-respuesta"  (click)="select3C()">El TLP no presenta diferencias significativas en cuanto al número de suicidios en comparación a otros trastornos. </h4>
+                      </div>
+                </div>
+            </div>
+            <div>
+                <div class="boton">
+                    <h4 class="texto-respuesta"  (click)="comprobar()"><b>Comprobar respuestas</b></h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div class="content " *ngIf="step==2">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 10rem;">
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta" style="width: 100%;text-align: center;">Lo sentimos!</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                    <h4 class="texto-respuesta" style="width: 100%;text-align: center;">Las respuestas seleccionadas no son correctas. Puedes volver a intentarlo pulsando el botón.</h4>
+                    <div class="boton">
+                        <h4 class="texto-respuesta"  (click)="recargar()"><b>Reintentar</b></h4>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div class="content " *ngIf="step==1">
+    <div class="container-fluid">
+        <div class="row " style="width: max;">
+          <div class="col" style="width: 100%;padding-top: 10rem;">
+            <div class="card text-center">
+                <div class="card-header cabecera1"  style="text-align: left ;">
+                  <h3 class="texto-respuesta" style="width: 100%;text-align: center;">¡Correcto!</h3>
+                </div>
+                <div class="card-body"  style="text-align: left ;">
+                    <h4 class="texto-respuesta" style="width: 100%;text-align: center;"><b></b>Ve al <b>mapa del mundo</b> para buscar la pegatina del QR 1 y pégala en tu hoja.</h4>
+                   
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div>
